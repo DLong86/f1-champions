@@ -29,12 +29,6 @@ export default function DriverList() {
 	return (
 		<div>
 			<h2>World Driver Champions List</h2>
-			{/* <div className="filters">
-				<button>Click one</button>
-				<button onClick={() => setUrl("http://localhost:8080")}>
-					Click two
-				</button>
-			</div> */}
 			{/* BELOW is the dropdown which should be its own component */}
 			<div>
 				<select onChange={selectYear}>
