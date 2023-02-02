@@ -16,16 +16,14 @@ app.get("/", (req, res) => {
 	});
 });
 
-app.get("/year", (req, res) => {
-	db.query(
-		"SELECT * FROM drivers WHERE year BETWEEN 1980 AND 1990",
-		(err, result) => {
-			if (err) {
-				console.error(err);
-			}
-			res.send(result);
+// Route to get all drivers
+app.get("/constructors", (req, res) => {
+	db.query("SELECT * FROM constructors", (err, result) => {
+		if (err) {
+			console.error(err);
 		}
-	);
+		res.send(result);
+	});
 });
 
 app.listen(port, () => console.log(`Server running on port: ${port}`));
