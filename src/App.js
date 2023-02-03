@@ -14,8 +14,6 @@ function App() {
 					<Routes>
 						<Route path="/" element={<DriverList />} />
 						<Route path="/constructors" element={<ConstructorList />} />
-						{/* <DriverList /> */}
-						{/* <ConstructorList /> */}
 					</Routes>
 				</div>
 			</BrowserRouter>

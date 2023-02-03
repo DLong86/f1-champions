@@ -49,6 +49,7 @@ export default function DriverList() {
 					<h4>{driver.year}</h4>
 					<h3>{driver.name}</h3>
 					<p className="text-slate-400">{driver.Nationality}</p>
+					<h5>{driver.team}</h5>
 				</li>
 			))}
 		</div>
