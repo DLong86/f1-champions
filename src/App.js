@@ -1,17 +1,17 @@
 // import { useState, useEffect } from "react";
 import Navbar from "./components/Navbar";
-import DriverList from "./components/DriverList";
+import DriverList from "./pages/DriverList";
+import ConstructorList from "./pages/ConstructorList";
 import "./App.css";
 
 function App() {
 	return (
 		<div className="App">
 			<Navbar />
-			return (
 			<div className="main">
-				<DriverList />
+				{/* <DriverList /> */}
+				<ConstructorList />
 			</div>
-			);
 		</div>
 	);
 }
