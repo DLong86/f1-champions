@@ -6,7 +6,8 @@ export default function Navbar() {
 		<div className="navbar">
 			<h1 className="nav-title">Formula 1 Champions</h1>
 			<div className="links">
-				<Link to="/">Drivers</Link>
+				<Link to="/">Stats</Link>
+				<Link to="/drivers">Drivers</Link>
 				<Link to="/constructors">Constructors</Link>
 			</div>
 		</div>

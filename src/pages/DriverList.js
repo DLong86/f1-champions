@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 export default function DriverList() {
 	const [drivers, setDrivers] = useState([]);
 	const [selectedDrivers, setSelectedDrivers] = useState(drivers);
-	const url = "http://localhost:8080";
+	const url = "http://localhost:8080/drivers";
 
 	// maybe put this in its own file
 	useEffect(() => {

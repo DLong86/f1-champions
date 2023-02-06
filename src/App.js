@@ -3,6 +3,7 @@ import { Route, BrowserRouter, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import DriverList from "./pages/DriverList";
 import ConstructorList from "./pages/ConstructorList";
+import Stats from "./pages/Stats";
 import "./App.css";
 
 function App() {
@@ -12,7 +13,8 @@ function App() {
 				<Navbar />
 				<div className="main">
 					<Routes>
-						<Route path="/" element={<DriverList />} />
+						<Route path="/" element={<Stats />} />
+						<Route path="/drivers" element={<DriverList />} />
 						<Route path="/constructors" element={<ConstructorList />} />
 					</Routes>
 				</div>
