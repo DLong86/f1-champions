@@ -47,8 +47,9 @@ export default function ConstructorList() {
 			{/* <Dropdown /> */}
 			{selectedConstructors.map((constructor) => (
 				<li key={constructor.id} className="driver-list">
-					<h4>{constructor.year}</h4>
-					<h3>{constructor.chassis}</h3>
+					<h3>{constructor.year}</h3>
+					<h3>{constructor.entrant}</h3>
+					{/* <h3>{constructor.chassis}</h3> */}
 					<p className="text-slate-400">{constructor.engine}</p>
 				</li>
 			))}
