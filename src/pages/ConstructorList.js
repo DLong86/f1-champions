@@ -2,8 +2,8 @@ import { useState, useEffect } from "react";
 
 export default function ConstructorList() {
 	const [constructors, setConstructors] = useState([]);
-	// const [selectedConstructors, setSelectedConstructors] =
-	// 	useState(constructors);
+	const [selectedConstructors, setSelectedConstructors] =
+		useState(constructors);
 	const url = "http://localhost:8080/constructors";
 
 	useEffect(() => {
@@ -12,14 +12,26 @@ export default function ConstructorList() {
 			.then((json) => setConstructors(json));
 	}, [url]);
 
-	console.log(constructors);
+	const selectYear = (e) => {
+		console.log(e.target.value);
+		const value = e.target.value;
+		console.log(value);
+
+		const filteredDrivers = constructors.filter(
+			(driver) =>
+				driver.year >= parseInt(value) && driver.year <= parseInt(value) + 9
+		);
+		setSelectedConstructors(filteredDrivers);
+	};
+
+	// console.log(constructors);
 
 	return (
 		<div>
 			<h1>World Constructor Champions List</h1>
 			{/* BELOW is the dropdown which should be its own component */}
 			<div>
-				<select>
+				<select onChange={selectYear}>
 					<option value="select">select decade</option>
 					<option value="2020">2020s</option>
 					<option value="2010">2010s</option>
@@ -33,7 +45,7 @@ export default function ConstructorList() {
 			</div>
 
 			{/* <Dropdown /> */}
-			{constructors.map((constructor) => (
+			{selectedConstructors.map((constructor) => (
 				<li key={constructor.id} className="driver-list">
 					<h4>{constructor.year}</h4>
 					<h3>{constructor.chassis}</h3>
