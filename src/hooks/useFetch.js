@@ -1,20 +1,20 @@
 import { useEffect, useState } from "react";
 
-const useFetch = async () => {
-	const url = "https://localhost:8080";
-	const [drivers, setDrivers] = useState([]);
-
-	console.log(drivers);
-
-	const fetchData = async () => {
-		return fetch(url)
-			.then((response) => response.json())
-			.then((data) => setDrivers(data)); // This state is never changing, think of a way to store the data in something else
-	};
+const useFetch = (url) => {
+	const [data, setData] = useState([]);
 
 	useEffect(() => {
+		const fetchData = async () => {
+			const res = await fetch(url);
+			const json = await res.json();
+
+			setData(json);
+		};
+
 		fetchData();
-	}, []);
+	}, [url]);
+
+	return { data };
 };
 
-module.exports(useFetch);
+export default useFetch;
