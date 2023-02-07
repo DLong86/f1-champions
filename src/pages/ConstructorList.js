@@ -7,6 +7,7 @@ export default function ConstructorList() {
 	const { data } = useFetch(url);
 	const [constructors, setConstructors] = useState(data);
 
+	/* Just need to put this in a function, and return the filtered drivers, maybe similar to the useFetch and store the setConstructor state to filteredDrivers */
 	const selectYear = (e) => {
 		console.log(e.target.value);
 		const value = e.target.value;
