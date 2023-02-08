@@ -1,7 +1,7 @@
 import { useState } from "react";
 import useFetch from "../hooks/useFetch";
 
-export default function Dropdown({ options, info }) {
+export default function Dropdown({ options }) {
 	const url = options;
 	const { data } = useFetch(url);
 	const [decade, setDecade] = useState(data);
