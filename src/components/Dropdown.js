@@ -1,7 +1,7 @@
 import { useState } from "react";
 import useFetch from "../hooks/useFetch";
 
-export default function Dropdown({ options }) {
+export default function Dropdown({ options, info }) {
 	const url = options;
 	const { data } = useFetch(url);
 	const [decade, setDecade] = useState(data);
@@ -31,23 +31,14 @@ export default function Dropdown({ options }) {
 				<option value="1950">1950s</option>
 			</select>
 
-			{url === "http://localhost:8080/drivers"
-				? decade.map((driver) => (
-						<li key={driver.id} className="driver-list">
-							<h4>{driver.year}</h4>
-							<h3>{driver.name}</h3>
-							<p className="text-slate-400">{driver.Nationality}</p>
-							<h5>{driver.team}</h5>
-						</li>
-				  ))
-				: decade.map((constructor) => (
-						<li key={constructor.id} className="driver-list">
-							<h4>{constructor.year}</h4>
-							<h3>{constructor.entrant}</h3>
-							{/* <h3>{constructor.chassis}</h3> */}
-							<p className="text-slate-400">{constructor.engine}</p>
-						</li>
-				  ))}
+			{decade.map((info) => (
+				<li key={info.id} className="driver-list">
+					<h4>{info.year}</h4>
+					<h3>{info.name || info.entrant}</h3>
+					<p className="text-slate-400">{info.Nationality || info.engine}</p>
+					<h5>{info.team}</h5>
+				</li>
+			))}
 		</div>
 	);
 }
