@@ -7,7 +7,6 @@ export default function Dropdown({ options }) {
 	const [decade, setDecade] = useState(data);
 
 	const selectYear = (e) => {
-		console.log(e.target.value);
 		const value = e.target.value;
 
 		const filteredDrivers = data.filter(
