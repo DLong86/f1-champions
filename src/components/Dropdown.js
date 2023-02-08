@@ -9,7 +9,6 @@ export default function Dropdown({ options }) {
 	const selectYear = (e) => {
 		console.log(e.target.value);
 		const value = e.target.value;
-		console.log(value);
 
 		const filteredDrivers = data.filter(
 			(driver) =>
@@ -17,6 +16,7 @@ export default function Dropdown({ options }) {
 		);
 		setDecade(filteredDrivers);
 	};
+
 	return (
 		<div>
 			<select onChange={selectYear}>
