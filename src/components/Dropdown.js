@@ -8,7 +8,6 @@ export default function Dropdown({ options }) {
 
 	const selectYear = (e) => {
 		const value = e.target.value;
-
 		const filteredDrivers = data.filter(
 			(driver) =>
 				driver.year >= parseInt(value) && driver.year <= parseInt(value) + 9
