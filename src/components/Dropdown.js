@@ -1,5 +1,6 @@
 import { useState } from "react";
 import useFetch from "../hooks/useFetch";
+import List from "./List";
 
 export default function Dropdown({ options }) {
 	const url = options;
@@ -30,12 +31,7 @@ export default function Dropdown({ options }) {
 			</select>
 
 			{decade.map((info) => (
-				<li key={info.id} className="driver-list">
-					<h4>{info.year}</h4>
-					<h3>{info.name || info.entrant}</h3>
-					<p className="text-slate-400">{info.Nationality || info.engine}</p>
-					<h5>{info.team}</h5>
-				</li>
+				<List key={info.id} info={info} />
 			))}
 		</div>
 	);

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import useFetch from "../hooks/useFetch";
+import List from "./List";
 
 export default function ByNationality() {
 	const url = "http://localhost:8080/drivers";
@@ -9,12 +10,7 @@ export default function ByNationality() {
 	const [byNation, setByNation] = useState(false);
 
 	// console.log(data);
-
-	/* NB: This gets all the drivers nationalities, now I need to:
-		-- find a way to not duplicate drivers (reduce?)
-		-- But still show how many times a driver has won e.g. "Jim Clark - 2, Lewis Hamilton - 7"
-	*/
-	const selectYear = (e) => {
+	const selectCountry = (e) => {
 		const value = e.target.value;
 		console.log(value);
 
@@ -24,6 +20,7 @@ export default function ByNationality() {
 
 		setCountry(filtered);
 	};
+	// Do the same thing for -- ByDriver --
 	// Below filters out duplicates in the mapped array (So I don't get the same country many times in the dropdown options!)
 	const nationality = data.map((driver) => driver.Nationality);
 	const filterNat = data.filter(
@@ -49,25 +46,8 @@ export default function ByNationality() {
 				</ul>
 			</div>
 			{byNation && (
-				// <select onChange={selectYear}>
-				// 	<option defaultValue={country}>Select country</option>
-				// 	<option value="ARG">Argentina</option>
-				// 	<option value="AUS">Australia</option>
-				// 	<option value="AUT">Austria</option>
-				// 	<option value="BRA">Brazil</option>
-				// 	<option value="CAN">Canada</option>
-				// 	<option value="FIN">Finland</option>
-				// 	<option value="FRA">France</option>
-				// 	<option value="GER">Germany</option>
-				// 	<option value="ITA">Italy</option>
-				// 	<option value="NED">Netherlands</option>
-				// 	<option value="NZL">New Zealand</option>
-				// 	<option value="ZAF">South Africa</option>
-				// 	<option value="SPA">Spain</option>
-				// 	<option value="GBR">United Kingdom</option>
-				// 	<option value="USA">United States</option>
-				// </select>
-				<select onChange={selectYear}>
+				<select onChange={selectCountry}>
+					<option defaultValue="GBR">Select country</option>
 					{filterNat.map((item) => {
 						return (
 							<option key={item.Nationality} value={item.Nationality}>
@@ -77,16 +57,7 @@ export default function ByNationality() {
 					})}
 				</select>
 			)}
-			{/* This list is being used many times, needs to be its own component */}
-			{byNation &&
-				country.map((info) => (
-					<li key={info.id} className="driver-list">
-						<h4>{info.year}</h4>
-						<h3>{info.name || info.entrant}</h3>
-						<p className="text-slate-400">{info.Nationality || info.engine}</p>
-						<h5>{info.team}</h5>
-					</li>
-				))}
+			{byNation && country.map((info) => <List key={info.id} info={info} />)}
 
 			{info && (
 				<div>
