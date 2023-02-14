@@ -1,8 +1,8 @@
 import { useState } from "react";
 import useFetch from "../hooks/useFetch";
-import List from "./List";
+import List from "./lists/List";
 
-export default function Dropdown({ options }) {
+export default function ByYear({ options }) {
 	const url = options;
 	const { data } = useFetch(url);
 	const [decade, setDecade] = useState(data);
