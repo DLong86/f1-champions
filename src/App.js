@@ -1,8 +1,8 @@
 // import { useState, useEffect } from "react";
 import { Route, BrowserRouter, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar";
-import DriverList from "./pages/DriverList";
-import ConstructorList from "./pages/ConstructorList";
+import Drivers from "./pages/Drivers";
+import Constructors from "./pages/Constructors";
 import Stats from "./pages/Stats";
 import "./App.css";
 
@@ -14,8 +14,8 @@ function App() {
 				<div className="main">
 					<Routes>
 						<Route path="/" element={<Stats />} />
-						<Route path="/drivers" element={<DriverList />} />
-						<Route path="/constructors" element={<ConstructorList />} />
+						<Route path="/drivers" element={<Drivers />} />
+						<Route path="/constructors" element={<Constructors />} />
 					</Routes>
 				</div>
 			</BrowserRouter>
