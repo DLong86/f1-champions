@@ -1,7 +1,8 @@
 import { useState } from "react";
 import FilterOptions from "./lists/FilterOptions";
 import ByNationality from "./ByNationality";
-import ByYear from "./ByYear";
+import ByDecade from "./ByDecade";
+import ByConstructor from "./ByConstructor";
 
 export default function DisplayLists({ targetUrl }) {
 	// This might only work for driver list! Might need to make a new one for constructors
@@ -9,24 +10,35 @@ export default function DisplayLists({ targetUrl }) {
 	const [info, setInfo] = useState(true);
 	const [byNation, setByNation] = useState(false);
 	const [byYear, setByYear] = useState(false);
+	const [byConstructor, setByConstructor] = useState(false);
 
 	// fix this so all of these functions are in one!!
 	const handleInfo = (e) => {
 		setByNation(false);
 		setByYear(false);
+		setByConstructor(false);
 		setInfo(true);
 	};
 
 	const handleNationality = (e) => {
 		setInfo(false);
 		setByYear(false);
+		setByConstructor(false);
 		setByNation(true);
 	};
 
-	const handleYear = (e) => {
+	const handleDecade = (e) => {
 		setInfo(false);
 		setByNation(false);
+		setByConstructor(false);
 		setByYear(true);
+	};
+
+	const handleConstructor = (e) => {
+		setInfo(false);
+		setByNation(false);
+		setByYear(false);
+		setByConstructor(true);
 	};
 
 	return (
@@ -34,7 +46,8 @@ export default function DisplayLists({ targetUrl }) {
 			<FilterOptions
 				handleInfo={handleInfo}
 				handleNationality={handleNationality}
-				handleYear={handleYear}
+				handleDecade={handleDecade}
+				handleConstructor={handleConstructor}
 			/>
 
 			{info && (
@@ -45,7 +58,9 @@ export default function DisplayLists({ targetUrl }) {
 
 			{byNation && <ByNationality />}
 
-			{byYear && <ByYear options={url} />}
+			{byYear && <ByDecade options={url} />}
+
+			{byConstructor && <ByConstructor />}
 		</div>
 	);
 }
