@@ -1,6 +1,6 @@
 // import { useState } from "react";
 import useFetch from "../hooks/useFetch";
-import ByYear from "../components/ByYear";
+import DisplayDriverLists from "../components/DisplayDriverLists";
 
 export default function Drivers() {
 	const url = "http://localhost:8080/drivers";
@@ -9,7 +9,7 @@ export default function Drivers() {
 	return (
 		<div>
 			<h1>World Driver Champions List</h1>
-			<ByYear options={url} />
+			<DisplayDriverLists targetUrl={url} />
 		</div>
 	);
 }

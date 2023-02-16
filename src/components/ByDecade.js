@@ -2,12 +2,12 @@ import { useState } from "react";
 import useFetch from "../hooks/useFetch";
 import List from "./lists/List";
 
-export default function ByYear({ options }) {
+export default function ByDecade({ options }) {
 	const url = options;
 	const { data } = useFetch(url);
 	const [decade, setDecade] = useState(data);
 
-	const selectYear = (e) => {
+	const selectDecade = (e) => {
 		const value = e.target.value;
 		const filteredDrivers = data.filter(
 			(driver) =>
@@ -18,7 +18,7 @@ export default function ByYear({ options }) {
 
 	return (
 		<div>
-			<select onChange={selectYear}>
+			<select onChange={selectDecade}>
 				<option value="select">select decade</option>
 				<option value="2020">2020s</option>
 				<option value="2010">2010s</option>
