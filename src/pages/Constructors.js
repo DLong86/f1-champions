@@ -1,6 +1,6 @@
 // import { useState } from "react";
 import useFetch from "../hooks/useFetch";
-import ByDecade from "../components/ByDecade";
+import DisplayConstructorLists from "../components/DisplayConstructorLists";
 
 export default function Constructors() {
 	const url = "http://localhost:8080/constructors";
@@ -9,7 +9,7 @@ export default function Constructors() {
 	return (
 		<div>
 			<h1>World Constructor Champions List</h1>
-			<ByDecade options={url} />
+			<DisplayConstructorLists targetUrl={url} />
 		</div>
 	);
 }
