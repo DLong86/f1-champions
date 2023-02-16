@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function FilterOptions({
+export default function FilterDriverOptions({
 	handleInfo,
 	handleNationality,
 	handleDecade,
@@ -14,7 +14,7 @@ export default function FilterOptions({
 			<button onClick={handleDecade}>By Decade</button>
 			{/* <button onClick={() => console.log("Willy")}>By Year</button> */}
 			{/* For the onstructors */}
-			<button onClick={handleConstructor}>By Constructor</button>
+			{/* <button onClick={handleConstructor}>By Constructor</button> */}
 		</div>
 	);
 }
