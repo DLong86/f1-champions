@@ -35,9 +35,11 @@ export default function ByNationality() {
 				})}
 			</select>
 
-			{country.map((info) => (
-				<List key={info.id} info={info} />
-			))}
+			<div>
+				{country.map((info) => (
+					<List key={info.id} info={info} />
+				))}
+			</div>
 		</div>
 	);
 }
