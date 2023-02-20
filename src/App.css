@@ -1,4 +1,4 @@
-.App {
+/* .App {
     position: relative;
     height: 100vh;
     width: 100%;
@@ -54,4 +54,14 @@
 
 .driver ul {
     padding: 0;
+} */
+
+.driver-list{
+    box-sizing: border-box;
+    list-style-type: none;
+    border: #e4e4e4 solid 1px;
+    border-radius: 5px;
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    width: 20%;
 }
