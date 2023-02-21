@@ -7,7 +7,7 @@ export default function Drivers() {
 	const { data } = useFetch(url);
 
 	return (
-		<div className="">
+		<div className="max-w-full h-screen">
 			<h1 className="text-3xl text-cyan-500">World Driver Champions List</h1>
 			<DisplayDriverLists targetUrl={url} />
 		</div>

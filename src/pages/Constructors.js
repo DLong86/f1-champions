@@ -7,7 +7,7 @@ export default function Constructors() {
 	const { data } = useFetch(url);
 
 	return (
-		<div>
+		<div className="h-screen max-w-full">
 			<h1 className="text-3xl text-cyan-500">
 				World Constructor Champions List
 			</h1>

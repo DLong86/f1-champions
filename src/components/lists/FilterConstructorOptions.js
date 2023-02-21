@@ -10,19 +10,19 @@ export default function FilterConstructorOptions({
 		<div className="select-filter">
 			<button
 				onClick={handleInfo}
-				className="m-1 px-2 py-0.5 bg-yellow-300 hover:bg-yellow-400 ease-in-out duration-300"
+				className="m-1 px-2 py-0.5 bg-secondary hover:bg-zinc-50/80 ease-in-out duration-300 text-primary rounded"
 			>
 				Information
 			</button>
 			<button
 				onClick={handleDecade}
-				className="m-1 px-2 py-0.5 bg-yellow-300 hover:bg-yellow-400 ease-in-out duration-300"
+				className="m-1 px-2 py-0.5 bg-secondary hover:bg-zinc-50/80 ease-in-out duration-300 text-primary rounded"
 			>
 				By Decade
 			</button>
 			<button
 				onClick={handleConstructor}
-				className="m-1 px-2 py-0.5 bg-yellow-300 hover:bg-yellow-400 ease-in-out duration-300"
+				className="m-1 px-2 py-0.5 bg-secondary hover:bg-zinc-50/80 ease-in-out duration-300 text-primary rounded"
 			>
 				By Constructor
 			</button>

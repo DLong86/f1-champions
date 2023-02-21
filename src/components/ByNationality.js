@@ -24,7 +24,7 @@ export default function ByNationality() {
 	);
 	return (
 		<div>
-			<select onChange={selectCountry}>
+			<select className="bg-primary" onChange={selectCountry}>
 				<option defaultValue="GBR">Select country</option>
 				{filterNat.map((item) => {
 					return (

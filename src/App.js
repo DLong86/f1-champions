@@ -8,7 +8,7 @@ import "./App.css";
 
 function App() {
 	return (
-		<div className="bg-slate-300/50">
+		<div className="bg-primary text-zinc-50">
 			<BrowserRouter>
 				<Navbar />
 				<div className="">

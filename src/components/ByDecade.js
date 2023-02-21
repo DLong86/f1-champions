@@ -18,7 +18,7 @@ export default function ByDecade({ options }) {
 
 	return (
 		<div>
-			<select onChange={selectDecade}>
+			<select className="bg-primary" onChange={selectDecade}>
 				<option value="select">select decade</option>
 				<option value="2020">2020s</option>
 				<option value="2010">2010s</option>

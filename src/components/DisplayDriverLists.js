@@ -42,7 +42,7 @@ export default function DisplayDriverLists({ targetUrl }) {
 	};
 
 	return (
-		<div>
+		<div className="bg-primary">
 			<FilterDriverOptions
 				handleInfo={handleInfo}
 				handleNationality={handleNationality}
