@@ -27,7 +27,8 @@ export default function ByConstructor() {
 
 	return (
 		<div>
-			<select onChange={selectConstructor}>
+			<select className="by" onChange={selectConstructor}>
+				<option defaultValue="McLaren">Select constructor</option>
 				{filterConstructor.map((constructor) => {
 					return (
 						<option key={constructor.chassis} value={constructor.chassis}>

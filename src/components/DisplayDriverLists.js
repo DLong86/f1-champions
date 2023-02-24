@@ -42,7 +42,7 @@ export default function DisplayDriverLists({ targetUrl }) {
 	};
 
 	return (
-		<div>
+		<div className="display-driver-list">
 			<FilterDriverOptions
 				handleInfo={handleInfo}
 				handleNationality={handleNationality}
@@ -59,8 +59,6 @@ export default function DisplayDriverLists({ targetUrl }) {
 			{byNation && <ByNationality />}
 
 			{byYear && <ByDecade options={url} />}
-
-			{/* {byConstructor && <ByConstructor />} */}
 		</div>
 	);
 }

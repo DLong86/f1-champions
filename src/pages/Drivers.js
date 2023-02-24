@@ -7,8 +7,8 @@ export default function Drivers() {
 	const { data } = useFetch(url);
 
 	return (
-		<div>
-			<h1>World Driver Champions List</h1>
+		<div className="drivers-container">
+			<h1 className="">World Driver Champions List</h1>
 			<DisplayDriverLists targetUrl={url} />
 		</div>
 	);

@@ -23,8 +23,8 @@ export default function ByNationality() {
 		({ Nationality }, index) => !nationality.includes(Nationality, index + 1)
 	);
 	return (
-		<div>
-			<select onChange={selectCountry}>
+		<div className="">
+			<select className="" onChange={selectCountry}>
 				<option defaultValue="GBR">Select country</option>
 				{filterNat.map((item) => {
 					return (
@@ -35,9 +35,11 @@ export default function ByNationality() {
 				})}
 			</select>
 
-			{country.map((info) => (
-				<List key={info.id} info={info} />
-			))}
+			<div>
+				{country.map((info) => (
+					<List key={info.id} info={info} />
+				))}
+			</div>
 		</div>
 	);
 }

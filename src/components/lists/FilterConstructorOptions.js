@@ -7,10 +7,16 @@ export default function FilterConstructorOptions({
 }) {
 	// This might only work for driver list! Might need to make a new one for constructors
 	return (
-		<div className="select-filter">
-			<button onClick={handleInfo}>Info</button>
-			<button onClick={handleDecade}>By Decade</button>
-			<button onClick={handleConstructor}>By Constructor</button>
+		<div className="filter-options">
+			<button onClick={handleInfo} className="">
+				Information
+			</button>
+			<button onClick={handleDecade} className="">
+				By Decade
+			</button>
+			<button onClick={handleConstructor} className="">
+				By Constructor
+			</button>
 		</div>
 	);
 }

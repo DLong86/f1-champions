@@ -7,8 +7,8 @@ export default function Constructors() {
 	const { data } = useFetch(url);
 
 	return (
-		<div>
-			<h1>World Constructor Champions List</h1>
+		<div className="constructors-container">
+			<h1 className="">World Constructor Champions List</h1>
 			<DisplayConstructorLists targetUrl={url} />
 		</div>
 	);

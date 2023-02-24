@@ -11,7 +11,7 @@ function App() {
 		<div className="App">
 			<BrowserRouter>
 				<Navbar />
-				<div className="main">
+				<div className="app-container">
 					<Routes>
 						<Route path="/" element={<Stats />} />
 						<Route path="/drivers" element={<Drivers />} />

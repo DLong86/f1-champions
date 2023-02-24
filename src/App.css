@@ -1,31 +1,62 @@
 .App {
     position: relative;
-    height: 100vh;
+    height: 100%;
     width: 100%;
     padding: 0;
     margin: 0;
-}
-.navbar {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    margin: 0;
-    background-color: brown;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    background-color: #202225;
     color: #fff;
 }
-
-.navbar .nav-title {
-    padding-left: 40px;
+.drivers-container, .constructors-container {
+    padding-top: 50px;
+    background-color: #202225;
+    height: 100%;
+    width: 80%
 }
 
-.navbar .links a {
-    padding-right: 100px;
+.list{
+    box-sizing: border-box;
+    list-style-type: none;
+    border: #e4e4e4 solid 1px;
+    border-radius: 5px;
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    text-align: center;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+.app-container {
+    display: flex;
+    justify-content: center;
+}
+
+.filter-options {
+    display: flex;
+    justify-content: space-around;
+}
+
+.select-menu {
+    width: 100%;
+    /* background-color: orange; */
+}
+.select-menu select {
+    width: 100%;
+    text-align: center;
+    padding: 6px 12px;
+    margin: 10px 0;
+}
+
+/* .display-driver-list {
+    height: 100vh;
+} */
+
+
+/* .navbar .links a {
+    padding-right: 20px;
     text-decoration: none;
     color: #fff;
-    font-size: 1.2rem;
+    font-size: 1rem;
     transition: 0.1s;
 }
 
@@ -43,7 +74,7 @@
     text-align: center;
 }
 
-.driver-list{
+.list{
     box-sizing: border-box;
     list-style-type: none;
     border: #e4e4e4 solid 1px;
@@ -54,4 +85,4 @@
 
 .driver ul {
     padding: 0;
-}
+} */
