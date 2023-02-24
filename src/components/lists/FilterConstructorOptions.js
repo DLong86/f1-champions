@@ -7,23 +7,14 @@ export default function FilterConstructorOptions({
 }) {
 	// This might only work for driver list! Might need to make a new one for constructors
 	return (
-		<div className="select-filter">
-			<button
-				onClick={handleInfo}
-				className="m-1 px-2 py-0.5 bg-secondary hover:bg-zinc-50/80 ease-in-out duration-300 text-primary rounded"
-			>
+		<div className="filter-options">
+			<button onClick={handleInfo} className="">
 				Information
 			</button>
-			<button
-				onClick={handleDecade}
-				className="m-1 px-2 py-0.5 bg-secondary hover:bg-zinc-50/80 ease-in-out duration-300 text-primary rounded"
-			>
+			<button onClick={handleDecade} className="">
 				By Decade
 			</button>
-			<button
-				onClick={handleConstructor}
-				className="m-1 px-2 py-0.5 bg-secondary hover:bg-zinc-50/80 ease-in-out duration-300 text-primary rounded"
-			>
+			<button onClick={handleConstructor} className="">
 				By Constructor
 			</button>
 		</div>

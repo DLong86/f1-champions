@@ -8,10 +8,10 @@ import "./App.css";
 
 function App() {
 	return (
-		<div className="bg-primary text-zinc-50">
+		<div className="App">
 			<BrowserRouter>
 				<Navbar />
-				<div className="">
+				<div className="app-container">
 					<Routes>
 						<Route path="/" element={<Stats />} />
 						<Route path="/drivers" element={<Drivers />} />

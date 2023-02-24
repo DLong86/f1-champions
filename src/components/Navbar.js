@@ -1,26 +1,28 @@
 import React from "react";
+import styles from "./Navbar.module.css";
 import { Link } from "react-router-dom";
-// import logo from "../../public/images/f1-logo.svg";
 
 export default function Navbar() {
 	// console.log(logo);
 	return (
-		// <div className="bg-secondary w-2/5">
-		<div className="">
-			<h1 className="text-5xl font-bold italic text-zinc-50">
-				Formula 1 <span className="text-gold">Champions</span>
+		<div className={styles.navbar}>
+			<h1 className={styles.navTitle}>
+				F1 <span className={styles.championsGold}>Champions</span>
 			</h1>
-			<div className="flex justify-start ">
-				<Link className="pr-2 text-xl" to="/">
+			{/* <div className="links">
+				<Link className="" to="/">
 					Stats
 				</Link>
-				<Link className="pr-2 text-xl" to="/drivers">
+				<Link className="" to="/drivers">
 					Drivers
 				</Link>
-				<Link className="pr-2 text-xl" to="/constructors">
+				<Link className="" to="/constructors">
 					Constructors
 				</Link>
-			</div>
+			</div> */}
+			<h2>
+				<i class="fa-solid fa-bars"></i>
+			</h2>
 		</div>
 	);
 }
