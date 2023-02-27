@@ -23,3 +23,41 @@
 .navbar i {
     padding-right: 20px;
 }
+.links {
+    height: 100vh;
+    width: 100%;
+    background-color: #dfdcdc;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    transition: 0.3s ease-in-out;
+}
+.links a {
+    text-decoration: none;
+    font-size: 2rem;
+    color: #202225;
+}
+.links .close {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 50px;
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 20px;
+}
+.links .close i:hover, .links a:hover {
+    color: #d4af37;
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+    font-size: 2.3rem;
+}
+.navbar i:hover {
+    color: #d4af37;
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+}

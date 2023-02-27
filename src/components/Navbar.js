@@ -1,27 +1,22 @@
-import React from "react";
+import { useState } from "react";
 import styles from "./Navbar.module.css";
-import { Link } from "react-router-dom";
+import Navlinks from "./Navlinks";
+// import { Link } from "react-router-dom";
 
 export default function Navbar() {
-	// console.log(logo);
+	const [closeNav, setCloseNav] = useState(true);
+
+	const closeLinks = () => {
+		setCloseNav((prev) => !prev);
+	};
 	return (
 		<div className={styles.navbar}>
 			<h1 className={styles.navTitle}>
 				F1 <span className={styles.championsGold}>Champions</span>
 			</h1>
-			{/* <div className="links">
-				<Link className="" to="/">
-					Stats
-				</Link>
-				<Link className="" to="/drivers">
-					Drivers
-				</Link>
-				<Link className="" to="/constructors">
-					Constructors
-				</Link>
-			</div> */}
+			{closeNav && <Navlinks closeLinks={closeLinks} />}
 			<h2>
-				<i class="fa-solid fa-bars"></i>
+				<i class="fa-solid fa-bars" onClick={closeLinks}></i>
 			</h2>
 		</div>
 	);
