@@ -8,7 +8,7 @@ export default function Drivers() {
 
 	return (
 		<div className="drivers-container">
-			<h1 className="">World Driver Champions List</h1>
+			<h1 className="page-title">World Driver Champions List</h1>
 			<DisplayDriverLists targetUrl={url} />
 		</div>
 	);

@@ -8,7 +8,7 @@ export default function Constructors() {
 
 	return (
 		<div className="constructors-container">
-			<h2 className="">World Constructor Champions List</h2>
+			<h2 className="page-title">World Constructor Champions List</h2>
 			<DisplayConstructorLists targetUrl={url} />
 		</div>
 	);

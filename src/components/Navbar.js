@@ -12,7 +12,7 @@ export default function Navbar() {
 	return (
 		<div className={styles.navbar}>
 			<h1 className={styles.navTitle}>
-				F1 <span className={styles.championsGold}>Champions</span>
+				F1 <span className={styles.championsTitle}>Champions</span>
 			</h1>
 			{closeNav && <Navlinks closeLinks={closeLinks} />}
 			<h2>

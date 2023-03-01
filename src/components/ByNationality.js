@@ -23,17 +23,19 @@ export default function ByNationality() {
 		({ Nationality }, index) => !nationality.includes(Nationality, index + 1)
 	);
 	return (
-		<div className="">
-			<select className="" onChange={selectCountry}>
-				<option defaultValue="GBR">Select country</option>
-				{filterNat.map((item) => {
-					return (
-						<option key={item.Nationality} value={item.Nationality}>
-							{item.Nationality}
-						</option>
-					);
-				})}
-			</select>
+		<div>
+			<div class="select-menu">
+				<select onChange={selectCountry}>
+					<option defaultValue="GBR">Select country</option>
+					{filterNat.map((item) => {
+						return (
+							<option key={item.Nationality} value={item.Nationality}>
+								{item.Nationality}
+							</option>
+						);
+					})}
+				</select>
+			</div>
 
 			<div>
 				{country.map((info) => (

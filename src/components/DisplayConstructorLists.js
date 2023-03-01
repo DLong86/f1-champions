@@ -33,7 +33,7 @@ export default function DisplayConstructorLists({ targetUrl }) {
 	};
 
 	return (
-		<div className="">
+		<div className="display-lists">
 			<FilterConstructorOptions
 				handleInfo={handleInfo}
 				handleDecade={handleDecade}
