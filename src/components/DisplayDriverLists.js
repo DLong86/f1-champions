@@ -42,7 +42,7 @@ export default function DisplayDriverLists({ targetUrl }) {
 	};
 
 	return (
-		<div className="display-driver-list">
+		<div className="display-lists">
 			<FilterDriverOptions
 				handleInfo={handleInfo}
 				handleNationality={handleNationality}

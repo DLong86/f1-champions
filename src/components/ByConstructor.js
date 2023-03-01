@@ -27,16 +27,18 @@ export default function ByConstructor() {
 
 	return (
 		<div>
-			<select className="by" onChange={selectConstructor}>
-				<option defaultValue="McLaren">Select constructor</option>
-				{filterConstructor.map((constructor) => {
-					return (
-						<option key={constructor.chassis} value={constructor.chassis}>
-							{constructor.chassis}
-						</option>
-					);
-				})}
-			</select>
+			<div class="select-menu">
+				<select onChange={selectConstructor}>
+					<option defaultValue="McLaren">Select constructor</option>
+					{filterConstructor.map((constructor) => {
+						return (
+							<option key={constructor.chassis} value={constructor.chassis}>
+								{constructor.chassis}
+							</option>
+						);
+					})}
+				</select>
+			</div>
 
 			{constructor.map((info) => (
 				<List key={info.id} info={info} />
