@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import Drivers from "./pages/Drivers";
 import Constructors from "./pages/Constructors";
 import Stats from "./pages/Stats";
+import Home from "./pages/Home";
 import "./App.css";
 
 function App() {
@@ -13,7 +14,8 @@ function App() {
 				<Navbar />
 				<div className="app-container">
 					<Routes>
-						<Route path="/" element={<Stats />} />
+						<Route path="/" element={<Home />} />
+						<Route path="/stats" element={<Stats />} />
 						<Route path="/drivers" element={<Drivers />} />
 						<Route path="/constructors" element={<Constructors />} />
 					</Routes>

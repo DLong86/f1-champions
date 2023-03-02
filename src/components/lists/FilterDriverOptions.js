@@ -5,7 +5,6 @@ export default function FilterDriverOptions({
 	handleNationality,
 	handleDecade,
 }) {
-	// This might only work for driver list! Might need to make a new one for constructors
 	return (
 		<div className="filter-options">
 			<button className="" onClick={handleInfo}>

@@ -2,10 +2,8 @@ import { useState } from "react";
 import FilterDriverOptions from "./lists/FilterDriverOptions";
 import ByNationality from "./ByNationality";
 import ByDecade from "./ByDecade";
-// import ByConstructor from "./ByConstructor";
 
 export default function DisplayDriverLists({ targetUrl }) {
-	// This might only work for driver list! Might need to make a new one for constructors
 	const url = targetUrl;
 	const [info, setInfo] = useState(true);
 	const [byNation, setByNation] = useState(false);

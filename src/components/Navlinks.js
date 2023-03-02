@@ -8,6 +8,9 @@ export default function Navlinks({ closeLinks }) {
 				<i class="fa-solid fa-x" onClick={closeLinks}></i>
 			</div>
 			<Link onClick={closeLinks} to="/">
+				Home
+			</Link>
+			<Link onClick={closeLinks} to="/stats">
 				Stats
 			</Link>
 			<Link onClick={closeLinks} to="/drivers">
