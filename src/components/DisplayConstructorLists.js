@@ -1,13 +1,9 @@
 import { useState } from "react";
-// import FilterConstructorOptions from "./lists/FilterConstructorOptions";
-// import ByDecade from "./ByDecade";
-// import ByConstructor from "./ByConstructor";
 import FilterConstructorOptions from "./lists/FilterConstructorOptions";
 import ByDecade from "./ByDecade";
 import ByConstructor from "./ByConstructor";
 
 export default function DisplayConstructorLists({ targetUrl }) {
-	// This might only work for driver list! Might need to make a new one for constructors
 	const url = targetUrl;
 	const [info, setInfo] = useState(true);
 	const [byYear, setByYear] = useState(false);

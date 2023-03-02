@@ -34,11 +34,14 @@
     padding-right: 20px;
     font-size: 2rem;
 }
+.navbar .links {
+    overflow: hidden;
+}
 .links {
-    height: 100vh;
+    height: 100%;
     width: 100%;
     background-color: #212832;
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
     display: flex;
@@ -47,13 +50,16 @@
     justify-content: center;
     transition: all 0.3s linear;
     font-family: "f1-bold";
+    overflow: -moz-hidden-unscrollable;
 }
+
 .links a {
     text-decoration: none;
     font-size: 2rem;
     color: #fff;
     transition: all 0.3s linear;
-    padding-bottom: 50px;
+    padding-bottom: 40px;
+    overflow: hidden;
 }
 .links .close {
     position: absolute;

@@ -5,6 +5,7 @@ export default function Stats() {
 		<div>
 			<h1>Stats Page</h1>
 			<p>this is the stats page...</p>
+			<p>Display stats about - most wins, most championships etc</p>
 		</div>
 	);
 }
