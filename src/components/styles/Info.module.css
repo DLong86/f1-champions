@@ -1,0 +1,24 @@
+.infoContainer {
+    padding-bottom: 50px;
+    margin-top: 50px;
+    line-height: 1.4rem;
+}
+
+.infoContainer a {
+    text-decoration: none;
+    color: #ad3b3f;
+}
+
+.infoContainer img {
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+}
+
+.infoContainer .quote {
+    text-align: center;
+}
+
+figcaption {
+    font-size: 0.8rem;
+}
