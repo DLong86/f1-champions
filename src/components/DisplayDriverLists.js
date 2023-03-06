@@ -2,6 +2,7 @@ import { useState } from "react";
 import FilterDriverOptions from "./lists/FilterDriverOptions";
 import ByNationality from "./ByNationality";
 import ByDecade from "./ByDecade";
+import DriverInfo from "./DriverInfo";
 
 export default function DisplayDriverLists({ targetUrl }) {
 	const url = targetUrl;
@@ -48,11 +49,7 @@ export default function DisplayDriverLists({ targetUrl }) {
 				handleConstructor={handleConstructor}
 			/>
 
-			{info && (
-				<div>
-					<h1>This is the Info state</h1>
-				</div>
-			)}
+			{info && <DriverInfo />}
 
 			{byNation && <ByNationality />}
 
