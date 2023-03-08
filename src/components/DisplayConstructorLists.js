@@ -2,6 +2,7 @@ import { useState } from "react";
 import FilterConstructorOptions from "./lists/FilterConstructorOptions";
 import ByDecade from "./ByDecade";
 import ByConstructor from "./ByConstructor";
+import ConstructorInfo from "./ConstructorInfo";
 
 export default function DisplayConstructorLists({ targetUrl }) {
 	const url = targetUrl;
@@ -36,11 +37,7 @@ export default function DisplayConstructorLists({ targetUrl }) {
 				handleConstructor={handleConstructor}
 			/>
 
-			{info && (
-				<div>
-					<h1>This is the Info state</h1>
-				</div>
-			)}
+			{info && <ConstructorInfo />}
 
 			{byYear && <ByDecade options={url} />}
 
